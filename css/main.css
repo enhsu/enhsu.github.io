@@ -1,0 +1,199 @@
+/* CSS navigation
+all
+logo
+about
+work
+contact
+footer
+*/
+/* all-start */
+@import url("//fonts.googleapis.com/earlyaccess/cwtexfangsong.css");
+body {
+  font-family: 'Papyrus', 'cwTeXFangSong';
+}
+ul {
+  list-style-type: none;
+}
+/* fixed bootstrap 
+ * div
+ *   margin-bottom: 20px
+ */
+.margin-zero {
+  margin-bottom: 0px;
+}
+#nav-container {
+  transition: top 0.2s ease-in-out;
+}
+/* all-end */
+/* logo-start */
+.nav-up {
+  top: -4em;
+}
+.logo {
+  width: 8.5em;
+  position: relative;
+}
+.sq {
+  width: 0.8em;
+  height: 0.8em;
+  background-color: #fff;
+  position: absolute;
+  display: inline-block;
+}
+.sq-c1 {
+  left: 0.8em;
+  animation: sq-in 0.2s 0s;
+}
+.sq-c2 {
+  left: 1.6em;
+  animation: sq-in 0.4s 0s;
+}
+.sq-c3 {
+  left: 2.4em;
+  animation: sq-in 0.6s 0s;
+}
+.sq-c4 {
+  left: 3.45em;
+  animation: sq-in 1s 0s;
+}
+.sq-c5 {
+  left: 4.25em;
+  animation: sq-in 1.2s 0s;
+}
+.sq-c6 {
+  left: 5.050000000000001em;
+  animation: sq-in 1.4s 0s;
+}
+.sq-c7 {
+  left: 6.100000000000001em;
+  animation: sq-in 1.8s 0s;
+}
+.sq-c8 {
+  left: 6.9em;
+  animation: sq-in 2s 0s;
+}
+.sq-c9 {
+  left: 7.7em;
+  animation: sq-in 2.2s 0s;
+}
+.sq-r1 {
+  top: 0.2em;
+}
+.sq-r2 {
+  top: 1em;
+}
+.sq-r3 {
+  top: 1.8em;
+}
+.sqhf {
+  height: 0.4em !important;
+}
+.sqhf-r3 {
+  top: 2.2em !important;
+}
+/* logo-end */
+/* about-start */
+#about-container {
+  min-height: 40rem;
+}
+.svg-lang {
+  width: 10em;
+  height: 10em;
+}
+#svg-portfolio {
+  width: 10em;
+  height: 10em;
+}
+#svg-portfolio text {
+  font-family: Copperplate, "Copperplate Gothic Light";
+  font-size: 0.95em;
+}
+/* about-end */
+/* work-start */
+#work-container {
+  min-height: 40rem;
+}
+.fa {
+  font-size: 3em;
+}
+.contact-link {
+  color: #80aa55;
+}
+.contact-link:hover {
+  color: #b8d0a2;
+}
+.contact-link:visited {
+  color: #80aa55;
+}
+.contact-link:active {
+  color: #fff;
+}
+/* work-end */
+/* contact-start */
+#contact-container {
+  min-height: 40rem;
+}
+.loader {
+  border: 0.5em solid #f3f3f3 /* Light grey */;
+  border-top: 0.5em solid #b8d0a2 /* light green */;
+  border-radius: 50%;
+  width: 2em;
+  height: 2em;
+  margin: 0.5em 1.5em;
+  animation: spin 2s linear infinite;
+}
+/* contact-end */
+/* footer-start */
+/* footer-end */
+@-moz-keyframes sq-in {
+  from {
+    transform: scale(0, 0);
+  }
+}
+@-webkit-keyframes sq-in {
+  from {
+    transform: scale(0, 0);
+  }
+}
+@-o-keyframes sq-in {
+  from {
+    transform: scale(0, 0);
+  }
+}
+@keyframes sq-in {
+  from {
+    transform: scale(0, 0);
+  }
+}
+@-moz-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
