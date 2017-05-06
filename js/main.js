@@ -1,5 +1,5 @@
-var pofo = (function() {
-  var smoothScroll = function() {
+var pofo = (function(myModule) {
+  myModule.smoothScroll = function() {
   /*
    * code source
    * https://css-tricks.com/snippets/jquery/smooth-scrolling/
@@ -33,7 +33,7 @@ var pofo = (function() {
       });
   };
   
-  var hideDownShowUp = function() {
+  myModule.hideDownShowUp = function() {
     /*
      * code source
      * http://codepen.io/viriava/pen/LxLYRP
@@ -78,7 +78,7 @@ var pofo = (function() {
     }
   };
   
-  var collapseNavbar = function() {
+  myModule.collapseNavbar = function() {
     $('.nav-link').click(function() {
       if($('.navbar-toggle').attr('aria-expanded')) {
         $('.navbar-toggle').click();
@@ -86,7 +86,16 @@ var pofo = (function() {
     });
   };
   
-  var initSendButton = function() {
+  myModule.isEmailValid = function(content) {
+    var arrCon = content.split('@');
+    if(arrCon.length == 2) {
+      return true;
+    }else {
+      return false
+    }
+  };
+  
+  myModule.initSendButton = function() {
     // framework: emailjs
     // emailjs DOC: https://www.emailjs.com/docs/
     $('.send-mail').click(function() {
@@ -109,36 +118,35 @@ var pofo = (function() {
       }
       
       if(userValid) {
-        $('.send-mail').css('display', 'none');
-        $('#response-message').html('');
-        $('#send-container').append('<div class="loader text-right"></div>');
-        emailjs.send('gmail', 'fromportfolio', mailContent)
-        .then(
-          function(response) {
-            console.log("SUCCESS", response);
-            $('.loader').css('display', 'none');
-            $('#send-container').append('<div class="btn btn-success">Sent</div>');
-            $('#response-message').html('Thanks for your message, I\'ll reply you ASAP :\)');
-          },
-          function(error) {
-            console.log("FAILED", error);
-            $('.loader').css('display', 'none');
-            $('#send-container').append('<div class="btn btn-danger">error</div>');
-            $('#response-message').html('Opps, something goes wrong, maybe you can contact me by <a href="https://github.com/enhsu" target="blank">GitHub</a>, <a href="https://www.linkedin.com/in/hsuchengen" target="blank">LinkedIn</a> or <a href="https://www.facebook.com/HsuChen9En" target="blank">Facebook</a>');
-          });
+        if(myModule.isEmailValid(userEmail)) {
+          $('.send-mail').css('display', 'none');
+          $('#response-message').html('');
+          $('#send-container').append('<div class="loader text-right"></div>');
+          emailjs.send('gmail', 'fromportfolio', mailContent)
+          .then(
+            function(response) {
+              console.log("SUCCESS", response);
+              $('.loader').css('display', 'none');
+              $('#send-container').append('<div class="btn btn-success">Sent</div>');
+              $('#response-message').html('Thanks for your message, I\'ll reply you ASAP :\)');
+            },
+            function(error) {
+              console.log("FAILED", error);
+              $('.loader').css('display', 'none');
+              $('#send-container').append('<div class="btn btn-danger">error</div>');
+              $('#response-message').html('Opps, something goes wrong, maybe you can contact me by <a href="https://github.com/enhsu" target="blank">GitHub</a>, <a href="https://www.linkedin.com/in/hsuchengen" target="blank">LinkedIn</a> or <a href="https://www.facebook.com/HsuChen9En" target="blank">Facebook</a>');
+            });
+        }else {
+          $('#response-message').html('Please enter a valid email address');
+        }
       }else {
         $('#response-message').html('Please fill in all fields. Thank you :\)');
       }
     });
   };
   
-  return {
-    'smoothScroll': smoothScroll,
-    'hideDownShowUp': hideDownShowUp,
-    'collapseNavbar': collapseNavbar,
-    'initSendButton': initSendButton
-  };
-})();
+  return myModule;
+})(pofo || {});
 
 $(document).ready(function() {
   // trigger scrool smoothly
