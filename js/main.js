@@ -203,6 +203,6 @@ $(document).ready(function() {
   pofo.collapseNavbar();
   // init send mail
   pofo.initSendButton();
-  // pofo.createWork(workData, 'work-list');
+  pofo.createWork(workData, 'work-list');
   pofo.createWork(fccProject, 'fcc-list');
 });
