@@ -1,0 +1,14 @@
+body {
+  margin-top: 5rem
+}
+  
+#home {
+  position:fixed;
+  right:15px;
+  bottom:10px;
+}
+
+#home > i {
+  font-size: 3em;
+  color: #80aa55;
+}

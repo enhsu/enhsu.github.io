@@ -1,3 +1,24 @@
+var workData = {
+  postcard: {
+    url: 'https://codepen.io/enhsu/full/VbrKjg/',
+    title: 'Electronic Postcard',
+    img: 'https://goo.gl/GxLZxy'
+    // describe: 'CSS only, electronic filp postcard, made for mother\'s day.'
+  }
+};
+var fccProject = {
+  tributePage: {
+    url: './html/fcc_tributePage.html',
+    title: 'Build a Tribute Page',
+    img: 'https://goo.gl/gvnPmP'
+  },
+  randomQuote: {
+    url: './html/fcc_randomQuote.html',
+    title: 'Build a Random Quote Machine',
+    img: 'https://goo.gl/BSsoQ6'
+  }
+};
+
 var pofo = (function(myModule) {
   myModule.smoothScroll = function() {
   /*
@@ -36,7 +57,7 @@ var pofo = (function(myModule) {
   myModule.hideDownShowUp = function() {
     /*
      * code source
-     * http://codepen.io/viriava/pen/LxLYRP
+     * https://codepen.io/viriava/pen/LxLYRP
      */
     // Hide Header on on scroll down
     var didScroll;
@@ -145,6 +166,29 @@ var pofo = (function(myModule) {
     });
   };
   
+  myModule.appendWork = function(val) {
+    var retStr = '';
+    
+    retStr = 
+      '<a href="' + val.url + '" target="_blank" class="work-demo"><div class="col-md-4 col-sm-6 col-xs-12">' +
+        '<h4 class="text-left">' + val.title + '</h4>' +
+        '<img src="' + val.img + '" class="img-responsive" style="width:100%;">' +
+      '</div></a>';
+    
+    return retStr;
+  };
+  
+  myModule.createWork = function(data, id) {
+    if(Object.keys(data).length) {
+      $.each(data, function(key, val) {
+        var workDemo = myModule.appendWork(val);
+        $('#' + id).append(workDemo);
+      });
+    }else {
+      $('#work-sataus').html('under construction ......');
+    }
+  };
+  
   return myModule;
 })(pofo || {});
 
@@ -159,4 +203,6 @@ $(document).ready(function() {
   pofo.collapseNavbar();
   // init send mail
   pofo.initSendButton();
+  // pofo.createWork(workData, 'work-list');
+  pofo.createWork(fccProject, 'fcc-list');
 });

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="UTF-8">
+    <title>A Tribute Page Demo</title>
+    <!-- tab icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../photo/icon/hsu.ico" />
+    <!-- include CSS START -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/fcc_tributePage.css">
+    <!-- include CSS END -->
+    <!-- include JS START -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/fcc_tributePage.js"></script>
+    <!-- include JS END -->
+  </head>
+  <body>
+    <div class="container" id="main">
+      <div class="jumbotron">
+        <div class="row">
+          <h1 class="text-center" id="person-name"></h1>
+          <h2 class="text-center" id="person-describe"></h2>
+          <div class="thumbnail" id="img-container"><img class="img-responsive" id="img-Src" style="width:100%"/>
+            <div class="caption text-center" id="img-Describe"></div>
+          </div>
+          <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+            <h3 id="timeline-Describe"></h3>
+            <ul id="timelineList"></ul>
+            <blockquote id="otherDescribe">
+              <p></p>
+              <footer>
+                <cite></cite>
+              </footer>
+            </blockquote>
+            <h3 id="wikiLink"></h3>
+          </div>
+        </div>
+      </div>
+      <aside>
+        <a id="home" title="Back To Home" href="../index.html"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </aside>
+      <footer class="text-center">
+        <hr/>
+        <p id="auther">coded by<span> <a href="#">Ian</a></span></p>
+      </footer>
+    </div>
+  </body>
+</html>
