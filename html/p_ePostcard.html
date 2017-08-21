@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Flip Post Card</title>
+    <!-- tab icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../photo/icon/hsu.ico" />
+    <!-- include CSS START -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico|Shadows+Into+Light">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/p_ePostcard.css">
+    <!-- include CSS END -->
+    <!-- include JS START -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- include JS END -->
+  </head>
+  <body>
+    <div class="container">
+      <div class="row text-center">
+        <h1 style="color:white">Please hover your mouse on the picture</h1>
+      </div>
+    </div>
+    <div class="flip-container container">
+      <div class="flipper">
+        <div class="front"></div>
+        <div class="back">
+          <div class="row">
+            <div class="col-md-offset-2 col-md-8 text-center">
+              <h1 class="post-card-band">POST CARD</h1>
+            </div>
+            <div class="col-md-2">
+              <div class="stamp"><img class="stamp-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGO-icRhRXL6YkqFmQ2igG5_T3ziGPGrjATQP9GcvroLNNsYrS"/>
+                <svg id="svg-sign" viewbox="0, 0, 100, 100" preserveAspectRatio="xMidYMid">
+                  <g>
+                    <circle cx="50" cy="50" r="40" stroke="#B8D0A2" stroke-width="0" fill="#B8D0A2"></circle>
+                    <!-- H-->
+                    <path stroke="white" fill="white" d="M 35 15 L 35 85 A 40 40 0 0 1 30 82 L 30 53 L 20 53 L 20 73 A 40 40 0 0 1 15 64 L 15 36 A 40 40 0 0 1 20 27 L 20 48 L 30 48 L 30 18 A 40 40 0 0 1 35 15"></path>
+                    <!-- S-->
+                    <path stroke="white" fill="white" d="M 40 14 A 40 40 0 0 1 60 14 L 60 19 A 50 50 0 0 0 45 19 L 45 48 L 60 48 L 60 86 A 40 40 0 0 1 40 86 L 40 81 A 40 40 0 0 0 55 81 L 55 53 L 40 53 Z"></path>
+                    <!-- U-->
+                    <path stroke="white" fill="white" d="M 65 16 L 65 84 A 40 40 0 0 0 85 63 L 85 38 A 40 40 0 0 0 80 27 L 80 60 A 40 40 0 0 1 70 75 L 70 19 A 40 40 0 0 0 65 16"></path>
+                    <text x="14" y="70" stroke="black" fill="black" style="font-size: 1.2em; opacity: 0.5">SENT BY</text>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-8 postcard-message">
+              <div class="message">
+                <p>Hello, there</p><br/>
+                <p>A postcard demo</p>
+                <p>sent by myself</p>
+                <p>the 3rd row</p>
+                <p class="text-right">Regards, Hsu</p><br/>
+                <p>P.S. cover photo taken in Monaco :)</p>
+              </div>
+            </div>
+            <div class="col-md-4 postcard-address">
+              <div class="address">
+                <h2>To</h2>
+                <div class="address-to">
+                  <p>Mr./Ms. You</p>
+                  <p>TAIWAN (R.O.C)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

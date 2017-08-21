@@ -1,0 +1,100 @@
+@import url("//fonts.googleapis.com/earlyaccess/cwtexfangsong.css");
+body {
+  background: #333;
+  min-width: 992px;
+}
+/*
+ * code from
+ * https://davidwalsh.name/css-flip
+ */
+/* entire container, keeps perspective */
+.flip-container {
+  margin-top: 1em;
+  perspective: 1000px;
+}
+/* flip the pane when hovered */
+.flip-container:hover .flipper,
+.flip-container.hover .flipper {
+  transform: rotateY(180deg);
+}
+.flip-container,
+.front,
+.back {
+  width: 97.08000000000001rem;
+  height: 60rem;
+}
+/* flip speed goes here */
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+/* hide back of pane during swap */
+.front,
+.back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  border: solid #fff 0.5em;
+}
+/* front pane, placed above back */
+.front {
+  background-color: #d1d0cc;
+  z-index: 2;
+/* for firefox 31 */
+  transform: rotateY(0deg);
+  background-size: 100% 100%;
+  background-image: url("../photo/Monaco.jpg");
+}
+/* back, initially hidden pane */
+.back {
+  background-color: #d1d0cc;
+  transform: rotateY(180deg);
+}
+.post-card-band {
+  font-family: 'Pacifico', cursive;
+  margin-top: 1.3em;
+  font-size: 3.5em;
+}
+.stamp {
+  width: 10em;
+  height: 12em;
+  margin-top: 0.5em;
+  position: relative;
+  left: -2em;
+  background-color: #d1d0cc;
+}
+.stamp-img {
+  width: 100%;
+  height: 100%;
+}
+#svg-sign {
+  width: 10em;
+  height: 10em;
+  position: relative;
+  top: -7em;
+  right: 5em;
+  opacity: 0.7;
+  filter: grayscale(1);
+  transform: rotate(-10deg);
+}
+.message {
+  margin-right: 2em;
+  margin-left: 2em;
+  font-family: 'cwTeXFangSong', serif;
+  font-size: 2em;
+}
+.address {
+  font-family: 'Pacifico', cursive;
+  margin-top: 2em;
+  margin-right: 0.5em;
+  margin-left: 0.5em;
+}
+.address-to {
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 2.3em;
+  margin-top: 2em;
+  margin-left: 1em;
+}

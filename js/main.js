@@ -1,8 +1,8 @@
 var workData = {
   postcard: {
-    url: 'https://codepen.io/enhsu/full/VbrKjg/',
+    url: './html/p_ePostcard.html',
     title: 'Electronic Postcard',
-    img: 'https://goo.gl/GxLZxy'
+    img: './photo/ePostcard.png'
     // describe: 'CSS only, electronic filp postcard, made for mother\'s day.'
   }
 };
@@ -10,12 +10,12 @@ var fccProject = {
   tributePage: {
     url: './html/fcc_tributePage.html',
     title: 'Build a Tribute Page',
-    img: './photo/tributePage.phg'
+    img: './photo/tributePage.png'
   },
   randomQuote: {
     url: './html/fcc_randomQuote.html',
     title: 'Build a Random Quote Machine',
-    img: './photo/randomQuote.phg'
+    img: './photo/randomQuote.png'
   }
 };
 
