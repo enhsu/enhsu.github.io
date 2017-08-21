@@ -10,12 +10,12 @@ var fccProject = {
   tributePage: {
     url: './html/fcc_tributePage.html',
     title: 'Build a Tribute Page',
-    img: 'https://goo.gl/gvnPmP'
+    img: './photo/tributePage.phg'
   },
   randomQuote: {
     url: './html/fcc_randomQuote.html',
     title: 'Build a Random Quote Machine',
-    img: 'https://goo.gl/BSsoQ6'
+    img: './photo/randomQuote.phg'
   }
 };
 
