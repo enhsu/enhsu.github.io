@@ -9,8 +9,8 @@ var person = {
     otherDescribe: 'A person who never made a mistake never tried anything new. - Albert Einstein',
     wikiIntroduce: 'If you have time, you should read more about this incredible human being on his',
     wikiLink: 'https://en.wikipedia.org/wiki/Albert_Einstein',
-    auther: 'Hsu Cheng-En',
-    autherLink: 'https://github.com/enhsu'
+    author: 'Hsu Cheng-En',
+    authorLink: 'https://github.com/enhsu'
   },
   prepareTimeline: function() {
     var retObj = {};
@@ -47,7 +47,7 @@ var person = {
     $('#otherDescribe p').html(arrOtherDescribe[0]);
     $('#otherDescribe cite').html(arrOtherDescribe[1]);
     $('#wikiLink').html(person.wikiLink());
-    $('#auther a').html(person.data.auther).attr('href', person.data.autherLink).attr('target', '_blank');
+    $('#author a').html(person.data.author).attr('href', person.data.authorLink).attr('target', '_blank');
   }
 };
 
